@@ -1,7 +1,6 @@
 name: ncov_submit
 
 on:
-  push :
   schedule :
     - cron : '30 8 * * *'
 
