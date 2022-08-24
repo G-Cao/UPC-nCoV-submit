@@ -47,4 +47,5 @@ jobs:
         echo $USER_TXT > user.txt
         cat user.txt
         python ncov.py
+        python notify.py
 
