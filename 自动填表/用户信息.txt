@@ -1,1 +1,1 @@
-{"username": "学号","password": "数字石大密码"}
+{"username": "学号(大写)","password": "数字石大密码"}
