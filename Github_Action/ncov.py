@@ -46,5 +46,5 @@ with opener.open('https://app.upc.edu.cn/ncov/wap/default/save', data=bytes(para
     print(resp.read().decode('utf-8'))
 
 curr_time = datetime.datetime.now()
-requests.request('post',
+requests.request('get',
                  f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日)')
