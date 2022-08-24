@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    #引用外部Action,拉取代码仓库到虚拟机工作目录
-    #git pull https://github.com/WCX1024979076/UPC-nCoV-submit.git
+    # 引用外部Action,拉取代码仓库到虚拟机工作目录
+    # git pull https://github.com/WCX1024979076/UPC-nCoV-submit.git
     - name : pull UPC-nCoV-submit
       run: |
         mkdir ncov_submit
@@ -39,6 +39,7 @@ jobs:
         pip install requests
       
     # 运行
+    # python notify.py
     - name : ncov_start
       env : 
         USER_TXT: ${{ secrets.USER }} # key
@@ -48,5 +49,4 @@ jobs:
         echo $USER_TXT > user.txt
         cat user.txt
         python ncov.py
-        python notify.py
 
