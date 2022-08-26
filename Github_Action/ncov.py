@@ -47,8 +47,10 @@ with open(log_file,"a",encoding='utf8') as p :
 params = urllib.parse.urlencode(result)
 with opener.open('https://app.upc.edu.cn/ncov/wap/default/save', data=bytes(params, 'utf-8')) as resp:
     print(resp.read().decode('utf-8'))
-    
-if curr_time.hour+8 > 24:
-    actual_hour = (curr_time.hour+8) - 24
+ 
+# UTC时间转换成北京时间
+actual_hour = curr_time.hour+8
+if actual_hour > 24:
+    actual_hour = (actual_hour) - 24
 response = requests.request('get', f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日{actual_hour}:{curr_time.minute})')
 print(response)
