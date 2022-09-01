@@ -18,7 +18,7 @@ jobs:
         dir
         cd ncov_submit
         git init
-        git pull https://github.com/StoriesCao/UPC-nCoV-submit.git
+        git pull https://github.com/G-Cao/UPC-nCoV-submit.git
         dir
         
 
