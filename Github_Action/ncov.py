@@ -51,5 +51,10 @@ params = urllib.parse.urlencode(result)
 with opener.open('https://app.upc.edu.cn/ncov/wap/default/save', data=bytes(params, 'utf-8')) as resp:
     print(resp.read().decode('utf-8'))
 
-response = requests.request('get', f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日{curr_time.hour}:{curr_time.minute})')
+# 显示分7:06而不是7:6
+if curr_time.minute < 10:
+    str = '0' + str(curr_time.minute)
+else:
+    str = str(curr_time.minute)
+response = requests.request('get', f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日{curr_time.hour}:{str})')
 print(response)
