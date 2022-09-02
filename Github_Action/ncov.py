@@ -56,5 +56,5 @@ if curr_time.minute < 10:
     str = '0' + str(curr_time.minute)
 else:
     str = str(curr_time.minute)
-response = requests.request('get', f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日{curr_time.hour}:{str})')
+response = requests.request('get', f'https://api.day.app/qjUhpKS9bJxkCyrsSxUzU5/签到成功!/UPC-疫情防控通已上报({curr_time.month}月{curr_time.day}日{curr_time.hour}:{str})?group=疫情防控通签到')
 print(response)
