@@ -27,7 +27,7 @@ jobs:
       run: |
         dir
     
-    # 搭建环境 pyhton
+    # 搭建环境 pyhton3.9
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
       with:
