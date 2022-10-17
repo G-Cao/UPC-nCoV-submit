@@ -17,6 +17,7 @@ log_file="./result.txt"     #日志文件
 cookie = http.cookiejar.LWPCookieJar(cookie_file)
 handler = urllib.request.HTTPCookieProcessor(cookie)
 
+# 模拟浏览器，要不然访问被拒绝了
 headers_tmp = ('User-Agent','Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36',)
 headers_2_tmp=('X-Requested-With', 'XMLHttpRequest')
 opener = urllib.request.build_opener(handler)
