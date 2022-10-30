@@ -4,7 +4,7 @@ name: ncov_submit
 on:
   push :
   schedule :
-    - cron : '10 16,23 * * *'
+    - cron : '1 16,23 * * *'
 
 jobs:
   build:
